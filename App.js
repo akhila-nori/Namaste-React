@@ -21,6 +21,8 @@ const parent = React.createElement(
     React.createElement("h2", {}, "Hey, I'm h2 tag"),
   ])
 );
+
+//JSX 
 console.log(parent);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

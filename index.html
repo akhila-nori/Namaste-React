@@ -16,5 +16,19 @@
         src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
       ></script>
     </div>
+
+    <script>
+      const heading = React.createElement(
+        "h1",
+        {fgfjorkgorkhrhkpr},
+        "This is heading inside h1"
+      );
+
+      //created a root for our react library, whatever we render will be inside the root
+      //root is the plac where our react code will run
+      const root = ReactDOM.createRoot(document.getElementById("root"));
+
+      root.render(heading);
+    </script>
   </body>
 </html>

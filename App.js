@@ -8,21 +8,22 @@
 // }
 
 // code this up and create a REACT DOM for the above - sibling - convert into array of different children
-//and wrap the siblings inside the square brackets 
-
-
+//and wrap the siblings inside the square brackets
 
 //here the 3rd argument is the children that you have to pass in
+
+import React from 'react'
+import ReactDOM from 'react-dom'
 const parent = React.createElement(
   "div",
   { id: "parent" },
-  React.createElement("div", { id: "child" }, [
+  React.createElement("div", { id: "akhila" }, [
     React.createElement("h1", {}, "Hey, I'm h1 tag"),
     React.createElement("h2", {}, "Hey, I'm h2 tag"),
   ])
 );
 
-//JSX 
+//JSX
 console.log(parent);
 const root = ReactDOM.createRoot(document.getElementById("root"));
 

@@ -18,9 +18,6 @@
   ],
   "author": "Akhila Nori",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/akhila-nori/Namaste-React/issues"
-  },
   "homepage": "https://github.com/akhila-nori/Namaste-React#readme",
   "devDependencies": {
     "parcel": "^2.12.0"

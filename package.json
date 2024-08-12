@@ -8,7 +8,8 @@
     "test": "jest"
   },
   "repository": {
-    "type": "git"
+    "type": "git",
+    "url": "git+https://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@github.com/akhila-nori/Namaste-React.git"
   },
   "keywords": [
     "react",
@@ -18,6 +19,9 @@
   ],
   "author": "Akhila Nori",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akhila-nori/Namaste-React/issues"
+  },
   "homepage": "https://github.com/akhila-nori/Namaste-React#readme",
   "devDependencies": {
     "parcel": "^2.12.0"

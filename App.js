@@ -13,7 +13,6 @@
 //here the 3rd argument is the children that you have to pass in
 
 import React from 'react'
-import ReactDOM from 'react-dom'
 const parent = React.createElement(
   "div",
   { id: "parent" },
@@ -23,8 +22,7 @@ const parent = React.createElement(
   ])
 );
 
-//JSX
-console.log(parent);
+console.log("WFEROJGOPREJGPRTKHPTYKJP6R5KWEJFBEIRGHJTMH6YYJ4EHTRE",parent);
 
 
 

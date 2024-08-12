@@ -8,8 +8,7 @@
     "test": "jest"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://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@github.com/akhila-nori/Namaste-React.git"
+    "type": "git"
   },
   "keywords": [
     "react",

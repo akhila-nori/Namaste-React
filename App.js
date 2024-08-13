@@ -1,29 +1,35 @@
-// {
-/* <div id="parent">
-     <div id="child">
-        <h1>Hey, I'm h1 tag sibling of h2 tag and child of div id child </h1>
-        <h2>Hey, I'm h2 tag sibling of h1 tag and child of div id child </h2>
-     </div>
-   </div> */
-// }
+import React from "react";
+import ReactDOM from "react-dom";
 
-// code this up and create a REACT DOM for the above - sibling - convert into array of different children
-//and wrap the siblings inside the square brackets
+const HeaderComponent = () => {
+  return (
+    <div className="headerCSS">
+      <div className="logo-conatiner">
+        <img
+          className="logo324grht"
+          src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/25539c29532269.55f7d6a0a8c71.jpg"
+        />
+      </div>
 
-//here the 3rd argument is the children that you have to pass in
+      <div className="nav-items1">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact</li>
+          <li>Cart</li>
+        </ul>
+      </div>
+    </div>
+  );
+};
 
-import React from 'react'
-const parent = React.createElement(
-  "div",
-  { id: "parent" },
-  React.createElement("div", { id: "akhila" }, [
-    React.createElement("h1", {}, "Hey, I'm h1 tag"),
-    React.createElement("h2", {}, "Hey, I'm h2 tag"),
-  ])
-);
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <HeaderComponent />
+    </div>
+  );
+};
 
-console.log("WFEROJGOPREJGPRTKHPTYKJP6R5KWEJFBEIRGHJTMH6YYJ4EHTRE",parent);
-
-
-
-
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<AppLayout />);

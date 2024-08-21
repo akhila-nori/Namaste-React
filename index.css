@@ -34,8 +34,12 @@
 .res-card {
   width: 200px;
   height: 300px;
-  border: 1px solid black;
   padding: 10px;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid black;
 }
 
 .searchCss {

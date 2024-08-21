@@ -29,6 +29,7 @@ const RestrauntCard = () => {
       className="res-card"
       style={{
         backgroundColor: "#f0f0f0",
+        
       }}
     >
       <img
@@ -40,6 +41,9 @@ const RestrauntCard = () => {
         }}
       />
       <h3>Meghana Foods</h3>
+      <h4>Biryani, North Indian, Asian</h4>
+      <h4>4.4 stars</h4>
+      <h4>38 minutes</h4>
     </div>
   );
 };

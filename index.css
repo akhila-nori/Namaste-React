@@ -1,3 +1,43 @@
 #akhila {
   color: red;
 }
+
+#anila {
+  color: purple;
+}
+
+.headerCSS {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+
+.logo324grht {
+  width: 250px;
+}
+
+.nav-items1 {
+  padding: 0px 50px;
+}
+
+.nav-items1 > ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.nav-items1 > ul > li {
+  font-size: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.res-card {
+  width: 200px;
+  height: 300px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.searchCss {
+  padding: 10px;
+}

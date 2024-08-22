@@ -30,3 +30,24 @@
   padding: 10px;
   margin: 10px;
 }
+
+.res-card {
+  width: 200px;
+  height: 300px;
+  padding: 10px;
+  margin: 5px;
+}
+
+.res-card:hover {
+  cursor: pointer;
+  border: 1px solid black;
+}
+
+.res-conatiner {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.searchCss {
+  padding: 10px;
+}

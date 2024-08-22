@@ -24,17 +24,20 @@ const HeaderComponent = () => {
 };
 
 const RestrauntCard = (props) => {
-  console.log("props is ...........", props);
-  // const { resData } = props;
+  console.log("props is .......", props); //here in props we are only passing resData neeche se
+
+  const { resData } = props;
+  //props se resData destructure kiya, yaani pure props object mein se resData ka content hi uthaya
+
   // console.log("ResData ...........", resData);
 
-  // const { name, costForTwo, avgRating, sla } = resData?.info; //optional chaining used here
+  const { name, costForTwo, avgRating, sla } = resData?.info; //optional chaining used here
   //here we are destructuring name, costForTwo, avgRating, sla ===> from resData.info
 
   // console.log("name ...........", name);
 
-  const { name, costForTwo, avgRating, sla, cloudinaryImageId } =
-    props?.resData?.info;
+  // const { name, costForTwo, avgRating, sla, cloudinaryImageId } =
+  //   props?.resData?.info;
   return (
     <div
       className="res-card"
@@ -46,7 +49,7 @@ const RestrauntCard = (props) => {
         alt="res-logo"
         src={
           "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-          cloudinaryImageId
+          resData.info.cloudinaryImageId
         }
         style={{
           width: "200px",
@@ -303,9 +306,12 @@ const BodyComponent = () => {
     <div className="bodyCss">
       <div className="searchCss">Search</div>
       <div className="res-conatiner">
-        <RestrauntCard resData={restauntList[0]} />
+        {/* <RestrauntCard resData={restauntList[0]} />
         <RestrauntCard resData={restauntList[1]} />
-        <RestrauntCard resData={restauntList[2]} />
+        <RestrauntCard resData={restauntList[2]} /> */}
+        {restauntList.map((res1) => (
+          <RestrauntCard key={res1.info.id} resData={res1} />
+        ))}
       </div>
     </div>
   );

@@ -1,11 +1,10 @@
+import { LOGO_URL } from "../../utils/constants";
+
 const HeaderComponent = () => {
   return (
     <div className="headerCSS">
       <div className="logo-conatiner">
-        <img
-          className="logo324grht"
-          src="https://mir-s3-cdn-cf.behance.net/project_modules/hd/25539c29532269.55f7d6a0a8c71.jpg"
-        />
+        <img className="logo324grht" src={LOGO_URL} />
       </div>
 
       <div className="nav-items1">

@@ -1,3 +1,5 @@
+import { CDN_URL } from "../../utils/constants";
+
 const RestrauntCard = (props) => {
   console.log("props is .......", props); //here in props we are only passing resData neeche se
 
@@ -23,7 +25,7 @@ const RestrauntCard = (props) => {
       <img
         alt="res-logo"
         src={
-          "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
+          CDN_URL +
           resData.info.cloudinaryImageId
         }
         style={{

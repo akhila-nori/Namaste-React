@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import HeaderComponent from "./components/Header";
 
 const RestrauntCard = (props) => {
   console.log("props is .......", props); //here in props we are only passing resData neeche se

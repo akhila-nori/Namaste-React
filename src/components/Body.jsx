@@ -3,10 +3,9 @@ import restauntList from "../../utils/mockData";
 import { useState } from "react";
 
 const BodyComponent = () => {
-  //normal javascript variable and not state variable
-
   const [listOfRestr, setListofRestr] = useState(restauntList);
-
+  console.log("dfojgtrjblgrmn", listOfRestr);
+  console.log("Body component is .....", <BodyComponent />);
   return (
     <div className="bodyCss">
       <div className="filterCss">
@@ -18,6 +17,9 @@ const BodyComponent = () => {
             const filteredListOfData = listOfRestr.filter(
               (res1) => res1.info.avgRating > 4
             );
+            {
+              console.log("INSIDE JSX", filteredListOfData);
+            }
             setListofRestr(filteredListOfData);
           }}
         >
@@ -25,10 +27,7 @@ const BodyComponent = () => {
         </button>
       </div>
       <div className="res-conatiner">
-        {/* <RestrauntCard resData={restauntList[0]} />
-        <RestrauntCard resData={restauntList[1]} />
-        <RestrauntCard resData={restauntList[2]} /> */}
-        {restauntList.map((res1) => (
+        {listOfRestr.map((res1) => (
           <RestrauntCard key={res1.info.id} resData={res1} />
         ))}
       </div>

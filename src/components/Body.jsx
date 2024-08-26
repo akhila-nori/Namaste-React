@@ -1,9 +1,30 @@
 import RestrauntCard from "./RestaurantCard";
 import restauntList from "../../utils/mockData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const BodyComponent = () => {
   const [listOfRestr, setListofRestr] = useState(restauntList);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data1 = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&collection=83631&tags=layout_CCS_Pizza&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
+    ); //fetch is an inbuilt fucntion that is given to us by browsers, JS engine ==> pure javascript
+    // fetch() will fetch data from the API
+    //fetch() ==> asynchronous fucntion (means this is a blocking operation, so it will be executed later) ==> fetch will return a promise
+    //How do we resolve a proisme ? ==> using async await
+    //I will async the fucntion and I will await for the data to come
+
+    //once we have data then we will convert the data to readable string i.e, json
+    const json = await data1.json();
+    //I am doing an await for the promsie to get resolved once the promise is resolved then I'll covernt the returned data into json
+
+    console.log("json....", json);
+  };
+
   console.log("dfojgtrjblgrmn", listOfRestr);
   console.log("Body component is .....", <BodyComponent />);
   return (

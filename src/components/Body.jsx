@@ -15,17 +15,6 @@ const BodyComponent = () => {
     );
     const json = await data1.json();
     console.log("json....", json);
-    // const extractedData = json?.data?.cards.map((card) => card.card.info);
-    // setListofRestr(json.data.cards.card.card);
-    // const ress = json.data.cards
-    //   .filter(
-    //     (card) =>
-    //       card.card["@type"] ===
-    //       "type.googleapis.com/swiggy.presentation.food.v2.Restaurant"
-    //   )
-    //   .map((card) => card.card)
-    //   .slice(4);
-    // console.log("ressssss..............", ress);
    
     setListofRestr(
       json.data.cards
@@ -38,6 +27,10 @@ const BodyComponent = () => {
         .slice(4)
     );
   };
+
+  if(listOfRestr.length === 0){
+    return <h1>Loading......</h1>
+  }
 
   console.log("dfojgtrjblgrmn", listOfRestr);
   console.log("Body component is .....", <BodyComponent />);

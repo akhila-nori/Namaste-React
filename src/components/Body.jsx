@@ -12,17 +12,21 @@ const BodyComponent = () => {
   const fetchData = async () => {
     const data1 = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&collection=83631&tags=layout_CCS_Pizza&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
-    ); //fetch is an inbuilt fucntion that is given to us by browsers, JS engine ==> pure javascript
-    // fetch() will fetch data from the API
-    //fetch() ==> asynchronous fucntion (means this is a blocking operation, so it will be executed later) ==> fetch will return a promise
-    //How do we resolve a proisme ? ==> using async await
-    //I will async the fucntion and I will await for the data to come
-
-    //once we have data then we will convert the data to readable string i.e, json
+    );
     const json = await data1.json();
-    //I am doing an await for the promsie to get resolved once the promise is resolved then I'll covernt the returned data into json
-
     console.log("json....", json);
+    // const extractedData = json?.data?.cards.map((card) => card.card.info);
+    // setListofRestr(json.data.cards.card.card);
+    const ress = json.data.cards
+      .filter(
+        (card) =>
+          card.card["@type"] ===
+          "type.googleapis.com/swiggy.presentation.food.v2.Restaurant"
+      )
+      .map((card) => card.card)
+      .slice(4);
+    console.log("ressssss..............", ress);
+    setListofRestr(ress);
   };
 
   console.log("dfojgtrjblgrmn", listOfRestr);

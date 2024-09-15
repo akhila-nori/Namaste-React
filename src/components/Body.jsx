@@ -9,7 +9,9 @@ const BodyComponent = () => {
   const [listOfRestr, setListofRestr] = useState(restauntList);
   // const [isDataLoading, setIsDataLoading] = useState(false);
 
-  // useEffect(() => {
+  //swiggy API fetching 
+
+  // useEffect(() => { 
   //   fetchData();
   // }, []);
 

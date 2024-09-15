@@ -41,7 +41,12 @@ const BodyComponent = () => {
     <SpinnerButton />
   ) : (
     <div className="bodyCss">
-      <div className="filterCss">
+      <div className="filterCss" style={{display: 'flex'}}>
+        <div className="search">
+          <input type="text" className="search-box" style={{marginTop: '10px', marginLeft: '10px'}}/>
+          <button>Search</button>
+        </div>
+
         <button
           className="filter-btn"
           style={{ margin: "10px", cursor: "pointer" }}

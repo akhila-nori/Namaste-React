@@ -17,7 +17,7 @@ const BodyComponent = () => {
   //   // const data1 = await fetch(
   //   //   "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.5204303&lng=73.8567437&collection=83631&tags=layout_CCS_Pizza&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
   //   // );
-  //   // const json = await data1.json();
+  //   // const json = await data1.json(); //await for the promise to resolve
   //   // console.log("json....", json);
   //   // setIsDataLoading(false);
   //   // const resto = json.data.cards
@@ -31,6 +31,9 @@ const BodyComponent = () => {
   //   // console.log("*****************", resto[0].card.info.avgRating);
   //   // setListofRestr(resto);
   // };
+  if (listOfRestr.length === 0) {
+    <SpinnerButton />;
+  }
 
   return (
     <div className="bodyCss">

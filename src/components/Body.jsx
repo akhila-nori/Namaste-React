@@ -7,10 +7,7 @@ import SpinnerButton from "./Loader";
 
 const BodyComponent = () => {
   const [listOfRestr, setListofRestr] = useState(restauntList);
-  // const [isDataLoading, setIsDataLoading] = useState(false);
-
-  //swiggy API fetching 
-
+  // const [isDataLoading, setIsDataLoading] = useState(false); 
   // useEffect(() => { 
   //   fetchData();
   // }, []);

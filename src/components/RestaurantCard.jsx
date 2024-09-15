@@ -1,17 +1,18 @@
 import { CDN_URL } from "../../utils/constants";
 
 const RestrauntCard = (props) => {
-  console.log("props is .......", props); //here in props we are only passing resData neeche se
+  console.log("props from resCard is .......", props); 
 
   const { resData } = props;
-  //props se resData destructure kiya, yaani pure props object mein se resData ka content hi uthaya
 
-  // console.log("ResData ...........", resData);
+  console.log('final resData in resCard is ....',resData)
 
-  const { name, costForTwo, avgRating, sla } = resData?.info; //optional chaining used here
-  //here we are destructuring name, costForTwo, avgRating, sla ===> from resData.info
+  // console.log("inside 2", resData.info.name);
 
-  // console.log("name ...........", name);
+ 
+  const { name, costForTwo, avgRating, sla } = resData.info;
+
+
 
   // const { name, costForTwo, avgRating, sla, cloudinaryImageId } =
   //   props?.resData?.info;

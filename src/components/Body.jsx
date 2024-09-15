@@ -7,8 +7,8 @@ import SpinnerButton from "./Loader";
 
 const BodyComponent = () => {
   const [listOfRestr, setListofRestr] = useState(restauntList);
-  // const [isDataLoading, setIsDataLoading] = useState(false); 
-  // useEffect(() => { 
+  // const [isDataLoading, setIsDataLoading] = useState(false);
+  // useEffect(() => {
   //   fetchData();
   // }, []);
 
@@ -31,11 +31,15 @@ const BodyComponent = () => {
   //   // console.log("*****************", resto[0].card.info.avgRating);
   //   // setListofRestr(resto);
   // };
-  if (listOfRestr.length === 0) {
-    <SpinnerButton />;
-  }
 
-  return (
+  //conditional rendering --> rendering on the basis of condition
+  // if (listOfRestr.length === 0) {
+  //   <SpinnerButton />;
+  // }
+
+  return listOfRestr.length === 0 ? (
+    <SpinnerButton />
+  ) : (
     <div className="bodyCss">
       <div className="filterCss">
         <button

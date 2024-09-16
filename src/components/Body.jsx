@@ -7,6 +7,7 @@ import SpinnerButton from "./Loader";
 
 const BodyComponent = () => {
   const [listOfRestr, setListofRestr] = useState(restauntList);
+  const [searchText, setSearchText] = useState("");
   // const [isDataLoading, setIsDataLoading] = useState(false);
   // useEffect(() => {
   //   fetchData();
@@ -38,13 +39,43 @@ const BodyComponent = () => {
   // }
 
   return listOfRestr.length === 0 ? (
-    <SpinnerButton />
+    <>
+      {console.log("listOfRestr.length....", listOfRestr.length)}
+      <SpinnerButton />
+    </>
   ) : (
     <div className="bodyCss">
-      <div className="filterCss" style={{display: 'flex'}}>
+      <div className="filterCss" style={{ display: "flex" }}>
         <div className="search">
-          <input type="text" className="search-box" style={{marginTop: '10px', marginLeft: '10px'}}/>
-          <button>Search</button>
+          <input
+            type="text"
+            className="search-box"
+            style={{ marginTop: "10px", marginLeft: "10px" }}
+            value={searchText} //binding input text box value entered here to state variable
+            onChange={(e) => {
+              console.log("Inside input text");
+              setSearchText(e.target.value); //whenever something changes in input text-box ==> onChange ==? when we type in searchBx ==> we update the state variable
+              //we are changing the state variable here ==> React re-renders the component when state variable is changed
+              //React re-renders the Body component ==> upon every letter being typed in input search-box
+            }}
+          />
+          {/* on click of this button filter the restraunt cards and update the UI */}
+          {/* search text */}
+          <button
+            onClick={() => {
+              console.log("Inside input text");
+              console.log("searchText is ...............", searchText);
+
+              //filter takes in a callback fucntion
+              const filteredRest = searchText === "" ? listOfRestr : listOfRestr.filter((res) => {
+                console.log('Search Text',searchText)
+                return res.info.name.toLocaleLowerCase().includes(searchText.toLocaleLowerCase()); //ensure the callback return s a value
+              });
+              setListofRestr(filteredRest); //update the UI with filetered rest
+            }}
+          >
+            Search
+          </button>
         </div>
 
         <button
@@ -55,9 +86,6 @@ const BodyComponent = () => {
             const filteredListOfData = listOfRestr.filter(
               (res1) => res1.info.avgRating > 4
             );
-            {
-              console.log("INSIDE JSX", filteredListOfData);
-            }
             setListofRestr(filteredListOfData);
           }}
         >

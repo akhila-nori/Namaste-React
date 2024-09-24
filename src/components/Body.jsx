@@ -63,7 +63,7 @@ const BodyComponent = () => {
       </div>
       <div className="res-conatiner">
         {listOfFilteredRest.map((res1) => (
-          <RestrauntCard resData={res1} />
+          <RestrauntCard key={res1.info.id} resData={res1} />
         ))}
       </div>
     </div>

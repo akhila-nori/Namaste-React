@@ -17,7 +17,7 @@ const HeaderComponent = () => {
       <div className="nav-items1">
         <ul>
           <li>Home</li>
-          <li>About Us</li>
+          <li><a href="/about">About Us</a></li>
           <li>Contact</li>
           <li>Cart</li>
           <button
